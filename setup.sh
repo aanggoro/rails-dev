@@ -1,4 +1,4 @@
-o "Provisioning virtual machine..."
+echo "Provisioning virtual machine..."
 
     echo "add depedencies"
     curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash
@@ -11,7 +11,7 @@ o "Provisioning virtual machine..."
 
     echo "install ruby and depedencies"
     cd
-    wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
+    wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz 
     tar -xzvf ruby-2.5.0.tar.gz
     cd ruby-2.5.0/
     ./configure
@@ -19,14 +19,11 @@ o "Provisioning virtual machine..."
     sudo make install
     ruby -v
 
-    rbenv install 2.5.0
-    rbenv global 2.5.0
-    ruby -v
-
     echo "rehash and install rails"
   
     gem install bundler
     gem install rails
+    
     echo "install mysql"
     apt-get install -y debconf-utils
     debconf-set-selections <<< "mysql-server mysql-server/root_password password anhar09"
