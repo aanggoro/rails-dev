@@ -61,7 +61,7 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #
       # Customize the amount of memory on the VM:
-      vb.memory = "256"
+      vb.memory = "1024"
 
       # set name the provider
       vb.name = "rails test vagrantfile"
