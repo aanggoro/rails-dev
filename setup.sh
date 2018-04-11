@@ -22,8 +22,8 @@ echo "Provisioning virtual machine..."
     echo "rehash and install rails"
   
     gem install bundler
-    gem install rails
-    
+    gem install rails -v 5.1.4
+ 
     echo "install mysql"
     apt-get install -y debconf-utils
     debconf-set-selections <<< "mysql-server mysql-server/root_password password anhar09"
